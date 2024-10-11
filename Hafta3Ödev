@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haftalık Ders Programı</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Haftalık Ders Programı</h1>
+    <table>
+        <tr>
+            <th>Gün</th>
+            <th>08:40 - 09:30</th>
+            <th>09:40 - 10:30</th>
+            <th>10:40 - 11:30</th>
+            <th>11:40 - 12:30</th>
+            <th>12:40 - 13:30</th>
+            <th>13:40 - 14:30</th>
+            <th>14:40 - 15:30</th>
+            <th>15:40 - 16:30</th>
+        </tr>
+        <tr>
+            <td>Pazartesi</td>
+            <td>Ders 1</td>
+            <td>Ders 2</td>
+            <td>Ders 3</td>
+            <td>Öğle Arası</td>
+            <td>Ders 4</td>
+            <td>Ders 5</td>
+            <td>Ders 6</td>
+            <td>Ders 7</td>
+        </tr>
+        <tr>
+            <td>Salı</td>
+            <td>Ders 1</td>
+            <td>Ders 2</td>
+            <td>Ders 3</td>
+            <td>Öğle Arası</td>
+            <td>Ders 4</td>
+            <td>Ders 5</td>
+            <td>Ders 6</td>
+            <td>Ders 7</td>
+        </tr>
+        <tr>
+            <td>Çarşamba</td>
+            <td>Ders 1</td>
+            <td>Ders 2</td>
+            <td>Ders 3</td>
+            <td>Öğle Arası</td>
+            <td>Ders 4</td>
+            <td>Ders 5</td>
+            <td>Ders 6</td>
+            <td>Ders 7</td>
+        </tr>
+        <tr>
+            <td>Perşembe</td>
+            <td>Ders 1</td>
+            <td>Ders 2</td>
+            <td>Ders 3</td>
+            <td>Öğle Arası</td>
+            <td>Ders 4</td>
+            <td>Ders 5</td>
+            <td>Ders 6</td>
+            <td>Ders 7</td>
+        </tr>
+        <tr>
+            <td>Cuma</td>
+            <td>Ders 1</td>
+            <td>Ders 2</td>
+            <td>Ders 3</td>
+            <td>Öğle Arası</td>
+            <td>Ders 4</td>
+            <td>Ders 5</td>
+            <td>Ders 6</td>
+            <td>Ders 7</td>
+        </tr>
+    </table>
+</body>
+</html>
