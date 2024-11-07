@@ -1,153 +1,160 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Görev 1 ve Görev 2</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS için ayrı dosya bağlantısı -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Görev 1 ve Görev 2</title>
+<link rel="stylesheet" href="styles.css"> <!-- External CSS için ayrı dosya bağlantısı -->
 
-    <style>
-        /* Görev 1 - 2. Kopya İçin Internal CSS */
-        .internal-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        .internal-table th, .internal-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-        .internal-table th {
-            background-color: #f2f2f2;
-        }
+<style>
+/* Görev 1 - 2. Kopya İçin Internal CSS */
+.internal-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+.internal-table th, .internal-table td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: center;
+}
+.internal-table th {
+background-color: #f2f2f2;
+}
 
-        .circle {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            position: absolute;
-            opacity: 0.6;
-        }
-
-        .circle1 {
-            background-color: #FF8C69;
-            top: 0;
-            left: 0;
+        /* Görev 2 - Daireler için CSS */
+        .circle-container {
+            margin-top: 40px; /* Başlıktan sonra boşluk bırakmak için */
+            position: relative;
+            height: 200px; /* Dairelerin yerleşeceği alan */
         }
 
-        .circle2 {
-            background-color: #8A2BE2;
-            top: 0;
-            left: 170px;
-        }
+.circle {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+position: absolute;
+opacity: 0.6;
+}
 
-        .circle3 {
-            background-color: #FFFF99;
-            top: 100px;
-            left: 85px;
-        }
-    </style>
+.circle1 {
+background-color: #FF8C69;
+top: 0;
+left: 0;
+}
+
+.circle2 {
+background-color: #8A2BE2;
+top: 0;
+left: 170px;
+}
+
+.circle3 {
+background-color: #FFFF99;
+top: 100px;
+left: 85px;
+}
+</style>
 </head>
 <body>
 
-    <!-- Görev 1 Başlığı -->
-    <h1>Görev 1: Ders Programı Tabloları</h1>
+<!-- Görev 1 Başlığı -->
+<h1>Görev 1: Ders Programı Tabloları</h1>
 
-    <!-- Inline CSS ile tablo - İlk Kopya -->
-    <h2>Tablo 1: Inline CSS</h2>
-    <table style="width: 100%; border-collapse: collapse;">
-        <tr>
-            <th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">Gün</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">08:40 - 09:30</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">09:40 - 10:30</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">10:40 - 11:30</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">11:40 - 12:30</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">12:40 - 13:30</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">13:40 - 14:30</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">14:40 - 15:30</th>
-            <th style="border: 1px solid #ddd; padding: 8px;">15:40 - 16:30</th>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd; padding: 8px;">Pazartesi</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">BTE307.01</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">BTE307.01</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">GKS104.01</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">GKS104.01</td>
-            <td style="border: 1px solid #ddd; padding: 8px;"></td>
-            <td style="border: 1px solid #ddd; padding: 8px;">BTE307.01 LAB</td>
-            <td style="border: 1px solid #ddd; padding: 8px;">BTE307.01 LAB</td>
-            <td style="border: 1px solid #ddd; padding: 8px;"></td>
-        </tr>
-        <!-- Diğer satırları buraya ekleyebilirsiniz -->
-    </table>
+<!-- Inline CSS ile tablo - İlk Kopya -->
+<h2>Tablo 1: Inline CSS</h2>
+<table style="width: 100%; border-collapse: collapse;">
+<tr>
+<th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">Gün</th>
+<th style="border: 1px solid #ddd; padding: 8px;">08:40 - 09:30</th>
+<th style="border: 1px solid #ddd; padding: 8px;">09:40 - 10:30</th>
+<th style="border: 1px solid #ddd; padding: 8px;">10:40 - 11:30</th>
+<th style="border: 1px solid #ddd; padding: 8px;">11:40 - 12:30</th>
+<th style="border: 1px solid #ddd; padding: 8px;">12:40 - 13:30</th>
+<th style="border: 1px solid #ddd; padding: 8px;">13:40 - 14:30</th>
+<th style="border: 1px solid #ddd; padding: 8px;">14:40 - 15:30</th>
+<th style="border: 1px solid #ddd; padding: 8px;">15:40 - 16:30</th>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px;">Pazartesi</td>
+<td style="border: 1px solid #ddd; padding: 8px;">BTE307.01</td>
+<td style="border: 1px solid #ddd; padding: 8px;">BTE307.01</td>
+<td style="border: 1px solid #ddd; padding: 8px;">GKS104.01</td>
+<td style="border: 1px solid #ddd; padding: 8px;">GKS104.01</td>
+<td style="border: 1px solid #ddd; padding: 8px;"></td>
+<td style="border: 1px solid #ddd; padding: 8px;">BTE307.01 LAB</td>
+<td style="border: 1px solid #ddd; padding: 8px;">BTE307.01 LAB</td>
+<td style="border: 1px solid #ddd; padding: 8px;"></td>
+</tr>
+<!-- Diğer satırları buraya ekleyebilirsiniz -->
+</table>
 
-    <!-- Internal CSS ile tablo - İkinci Kopya -->
-    <h2>Tablo 2: Internal CSS</h2>
-    <table class="internal-table">
-        <tr>
-            <th>Gün</th>
-            <th>08:40 - 09:30</th>
-            <th>09:40 - 10:30</th>
-            <th>10:40 - 11:30</th>
-            <th>11:40 - 12:30</th>
-            <th>12:40 - 13:30</th>
-            <th>13:40 - 14:30</th>
-            <th>14:40 - 15:30</th>
-            <th>15:40 - 16:30</th>
-        </tr>
-        <tr>
-            <td>Pazartesi</td>
-            <td>BTE307.01</td>
-            <td>BTE307.01</td>
-            <td>GKS104.01</td>
-            <td>GKS104.01</td>
-            <td></td>
-            <td>BTE307.01 LAB</td>
-            <td>BTE307.01 LAB</td>
-            <td></td>
-        </tr>
-        <!-- Diğer satırları buraya ekleyebilirsiniz -->
-    </table>
+<!-- Internal CSS ile tablo - İkinci Kopya -->
+<h2>Tablo 2: Internal CSS</h2>
+<table class="internal-table">
+<tr>
+<th>Gün</th>
+<th>08:40 - 09:30</th>
+<th>09:40 - 10:30</th>
+<th>10:40 - 11:30</th>
+<th>11:40 - 12:30</th>
+<th>12:40 - 13:30</th>
+<th>13:40 - 14:30</th>
+<th>14:40 - 15:30</th>
+<th>15:40 - 16:30</th>
+</tr>
+<tr>
+<td>Pazartesi</td>
+<td>BTE307.01</td>
+<td>BTE307.01</td>
+<td>GKS104.01</td>
+<td>GKS104.01</td>
+<td></td>
+<td>BTE307.01 LAB</td>
+<td>BTE307.01 LAB</td>
+<td></td>
+</tr>
+<!-- Diğer satırları buraya ekleyebilirsiniz -->
+</table>
 
-    <!-- External CSS ile tablo - Üçüncü Kopya -->
-    <h2>Tablo 3: External CSS</h2>
-    <table class="external-table">
-        <tr>
-            <th>Gün</th>
-            <th>08:40 - 09:30</th>
-            <th>09:40 - 10:30</th>
-            <th>10:40 - 11:30</th>
-            <th>11:40 - 12:30</th>
-            <th>12:40 - 13:30</th>
-            <th>13:40 - 14:30</th>
-            <th>14:40 - 15:30</th>
-            <th>15:40 - 16:30</th>
-        </tr>
-        <tr>
-            <td>Pazartesi</td>
-            <td>BTE307.01</td>
-            <td>BTE307.01</td>
-            <td>GKS104.01</td>
-            <td>GKS104.01</td>
-            <td></td>
-            <td>BTE307.01 LAB</td>
-            <td>BTE307.01 LAB</td>
-            <td></td>
-        </tr>
-        <!-- Diğer satırları buraya ekleyebilirsiniz -->
-    </table>
+<!-- External CSS ile tablo - Üçüncü Kopya -->
+<h2>Tablo 3: External CSS</h2>
+<table class="external-table">
+<tr>
+<th>Gün</th>
+<th>08:40 - 09:30</th>
+<th>09:40 - 10:30</th>
+<th>10:40 - 11:30</th>
+<th>11:40 - 12:30</th>
+<th>12:40 - 13:30</th>
+<th>13:40 - 14:30</th>
+<th>14:40 - 15:30</th>
+<th>15:40 - 16:30</th>
+</tr>
+<tr>
+<td>Pazartesi</td>
+<td>BTE307.01</td>
+<td>BTE307.01</td>
+<td>GKS104.01</td>
+<td>GKS104.01</td>
+<td></td>
+<td>BTE307.01 LAB</td>
+<td>BTE307.01 LAB</td>
+<td></td>
+</tr>
+<!-- Diğer satırları buraya ekleyebilirsiniz -->
+</table>
 
-    <!-- Görev 2 Başlığı -->
-    <h1>Görev 2: Daireler</h1>
+<!-- Görev 2 Başlığı -->
+<h1>Görev 2: Daireler</h1>
 
-    <!-- Daireleri içeren container -->
-    <div class="circle-container">
-        <!-- Üç tane daire oluşturun -->
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
-    </div>
+<!-- Daireleri içeren container -->
+<div class="circle-container">
+<!-- Üç tane daire oluşturun -->
+<div class="circle circle1"></div>
+<div class="circle circle2"></div>
+<div class="circle circle3"></div>
+</div>
 
 </body>
 </html>
