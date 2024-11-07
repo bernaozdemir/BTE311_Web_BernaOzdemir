@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Grid Örneği</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto 1fr 1fr;
+      gap: 10px;
+    }
 
+    .header {
+      grid-column: 1 / span 3;
+      background-color: navy;
+    }
+
+    .left-column, .right-column {
+      background-color: #e0a57b;
+    }
+
+    .center-column {
+      background-color: #84a98c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">A</div>
+    <div class="left-column">
+      <div class="item">B</div>
+      <div class="item">E</div>
+      <div class="item">G</div>
+    </div>
+    <div class="center-column">
+      <div class="item">C</div>
+    </div>
+    <div class="right-column">
+      <div class="item">D</div>
+      <div class="item">F</div>
+    </div>
+  </div>
+</body>
+</html>
