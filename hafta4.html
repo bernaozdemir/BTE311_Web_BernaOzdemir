@@ -45,3 +45,69 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programcılığı Testi</title>
+</head>
+<body>
+    <h2>Web Programcılığı Testi</h2>
+    <form action="submit_test.php" method="post">
+        
+        <!-- Metin Girişi -->
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Sayı Girişi -->
+        <label for="age">Yaşınız:</label>
+        <input type="number" id="age" name="age" min="1" max="100"><br><br>
+
+        <!-- E-posta Girişi -->
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <!-- Şifre Girişi -->
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <!-- Radyo Butonları -->
+        <p>HTML hangi yıl icat edilmiştir?</p>
+        <input type="radio" id="html1990" name="html_year" value="1990">
+        <label for="html1990">1990</label><br>
+        <input type="radio" id="html1995" name="html_year" value="1995">
+        <label for="html1995">1995</label><br><br>
+
+        <!-- Onay Kutuları -->
+        <p>Web programlama dilleri hangileridir? (Birden çok seçim yapabilirsiniz)</p>
+        <input type="checkbox" id="html" name="languages" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="checkbox" id="css" name="languages" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" id="javascript" name="languages" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+        <input type="checkbox" id="python" name="languages" value="Python">
+        <label for="python">Python</label><br><br>
+
+        <!-- Tarih Seçimi -->
+        <label for="exam_date">Sınav Tarihi:</label>
+        <input type="date" id="exam_date" name="exam_date"><br><br>
+
+        <!-- Saat Seçimi -->
+        <label for="exam_time">Sınav Saati:</label>
+        <input type="time" id="exam_time" name="exam_time"><br><br>
+
+        <!-- Renk Seçimi -->
+        <label for="fav_color">Favori Renk:</label>
+        <input type="color" id="fav_color" name="fav_color"><br><br>
+
+        <!-- Dosya Yükleme -->
+        <label for="file_upload">Dosya Yükleyin:</label>
+        <input type="file" id="file_upload" name="file_upload"><br><br>
+
+        <!-- Gönder Butonu -->
+        <input type="submit" value="Gönder">
+    </form>
+</body>
+</html>
