@@ -22,7 +22,12 @@
             background-color: #f2f2f2;
         }
 
-        /* Görev 2 - Internal CSS */
+        /* Görev 2 - Daireler için CSS */
+        .circle-container {
+            margin-top: 40px; /* Başlıktan sonra boşluk bırakmak için */
+            position: relative;
+        }
+
         .circle {
             width: 150px;
             height: 150px;
@@ -33,20 +38,20 @@
 
         .circle1 {
             background-color: #FF8C69;
-            top: 50px;
-            left: 100px;
+            top: 0;
+            left: 0;
         }
 
         .circle2 {
             background-color: #8A2BE2;
-            top: 50px;
+            top: 0;
             left: 170px;
         }
 
         .circle3 {
             background-color: #FFFF99;
-            top: 120px;
-            left: 135px;
+            top: 100px;
+            left: 85px;
         }
     </style>
 </head>
@@ -142,10 +147,13 @@
     <!-- Görev 2 Başlığı -->
     <h1>Görev 2: Daireler</h1>
 
-    <!-- Üç tane daire oluşturun -->
-    <div class="circle circle1"></div>
-    <div class="circle circle2"></div>
-    <div class="circle circle3"></div>
+    <!-- Daireleri içeren container -->
+    <div class="circle-container">
+        <!-- Üç tane daire oluşturun -->
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
 
 </body>
 </html>
