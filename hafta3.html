@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haftalık Ders Programı ve Form</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hafta 3 Ödevi</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    /* Tab styling */
+    .tabs {
+        display: flex;
+        cursor: pointer;
+    }
+    .tabs div {
+        padding: 10px 20px;
+        border: 1px solid #ddd;
+        margin-right: 5px;
+        background-color: #f2f2f2;
+        text-align: center;
+    }
+    .tabs div.active {
+        background-color: #ddd;
+    }
+    .tab-content {
+        display: none;
+        padding: 20px;
+        border-top: 1px solid #ddd;
+    }
+    .tab-content.active {
+        display: block;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
 </head>
 <body>
-    <h1>Haftalık Ders Programı</h1>
+
+<h1>Hafta 3 Ödevi</h1>
+
+<!-- Tabs (Ders Programı ve Form) -->
+<div class="tabs">
+    <div class="tab-link active" data-tab="ders-programi">Ders Programı</div>
+    <div class="tab-link" data-tab="form">Form</div>
+</div>
+
+<!-- Tab Contents -->
+<div id="ders-programi" class="tab-content active">
+    <h2>Ders Programı</h2>
     <table>
         <tr>
             <th>Gün</th>
@@ -89,29 +128,10 @@
             <td></td>
         </tr>
     </table>
-</body>
-</html>
+</div>
 
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-    </style>
-</head>
-<body>
-    <h1>Lütfen formu eksiksiz doldurunuz.</h1>
+<div id="form" class="tab-content">
+    <h2>Lütfen formu eksiksiz doldurunuz.</h2>
     <hr>
     <form>
         <table>
@@ -165,5 +185,39 @@
                     <input type="checkbox" name="hobiler" value="sinema"> Sinema
                     <input type="checkbox" name="hobiler" value="gezmek"> Gezmek
                     <input type="checkbox" name="hobiler" value="spor"> Spor
-                    <input type="checkbox" name="hobiler" value="kitap">Kitap 
-        </p> <input type="submit" value="Kaydet"> </form>
+                    <input type="checkbox" name="hobiler" value="kitap"> Kitap
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Kaydet">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+    // Sekme geçişini yöneten JavaScript kodu
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const targetTab = tab.getAttribute('data-tab');
+            contents.forEach(content => {
+                if (content.id === targetTab) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
