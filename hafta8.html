@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tatlı Yüzler</title>
-<style>
+<title>Animated Talking Circles</title>
+<style> 
   /* Ortaya hizalama için */
   body {
     display: flex;
@@ -23,6 +23,47 @@
     background-color: purple;
     display: inline-block;
     position: relative;
+  }
+
+  /* Yüz parçaları */
+  .eye {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+  }
+  .eye.left { left: 25px; }
+  .eye.right { right: 25px; }
+
+  .nose {
+    width: 8px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mouth {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    width: 20px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: talk 0.5s ease-in-out infinite;
+  }
+
+  /* Konuşma animasyonu */
+  @keyframes talk {
+    0%, 100% { height: 5px; }
+    50% { height: 15px; }
   }
 
   /* Yukarı-aşağı hareket eden */
@@ -83,11 +124,40 @@
 </head>
 <body>
 
-<div class="circle up-down"></div>
-<div class="circle grow-shrink"></div>
-<div class="circle fade"></div>
-<div class="circle left-right"></div>
-<div class="circle rotate"></div>
+<div class="circle up-down">
+  <div class="eye left"></div>
+  <div class="eye right"></div>
+  <div class="nose"></div>
+  <div class="mouth"></div>
+</div>
+
+<div class="circle grow-shrink">
+  <div class="eye left"></div>
+  <div class="eye right"></div>
+  <div class="nose"></div>
+  <div class="mouth"></div>
+</div>
+
+<div class="circle fade">
+  <div class="eye left"></div>
+  <div class="eye right"></div>
+  <div class="nose"></div>
+  <div class="mouth"></div>
+</div>
+
+<div class="circle left-right">
+  <div class="eye left"></div>
+  <div class="eye right"></div>
+  <div class="nose"></div>
+  <div class="mouth"></div>
+</div>
+
+<div class="circle rotate">
+  <div class="eye left"></div>
+  <div class="eye right"></div>
+  <div class="nose"></div>
+  <div class="mouth"></div>
+</div>
 
 </body>
 </html>
