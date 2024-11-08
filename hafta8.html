@@ -20,11 +20,11 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: purple;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: #ffcccb;
   }
 
   /* Gözler */
@@ -36,7 +36,6 @@
     position: absolute;
     top: 30px;
   }
-
   .eye.left { left: 30px; }
   .eye.right { right: 30px; }
 
@@ -50,103 +49,98 @@
     top: 45px;
   }
 
-  /* Kulaklar */
-  .ear {
-    width: 15px;
-    height: 15px;
-    background-color: #999;
-    border-radius: 50%;
-    position: absolute;
-  }
-
-  .ear.left { left: -10px; top: 35px; }
-  .ear.right { right: -10px; top: 35px; }
-
   /* Ağız */
   .mouth {
+    position: absolute;
+    top: 60px;
     width: 20px;
     height: 10px;
     background-color: black;
+    border-radius: 50%;
+  }
+
+  /* Ağlayan ağız ve gözyaşları */
+  .crying .mouth {
     border-radius: 0 0 10px 10px;
+    height: 5px;
+    background-color: black;
+  }
+
+  .tear {
+    width: 5px;
+    height: 10px;
+    background-color: lightblue;
     position: absolute;
-    top: 60px;
-    animation: talk 0.5s ease-in-out infinite;
+    top: 45px;
+    border-radius: 50%;
+    animation: tearDrop 1s infinite;
+  }
+  .tear.left { left: 25px; }
+  .tear.right { right: 25px; animation-delay: 0.5s; }
+
+  @keyframes tearDrop {
+    0% { top: 45px; opacity: 1; }
+    100% { top: 70px; opacity: 0; }
   }
 
-  /* Konuşma animasyonu */
-  @keyframes talk {
-    0%, 100% { height: 5px; }
-    50% { height: 15px; }
+  /* Kahkaha atan ağız */
+  .laughing .mouth {
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    top: 55px;
   }
 
-  /* Yukarı-aşağı hareket eden */
-  .up-down {
-    animation: upDown 2s ease-in-out infinite;
-    background-color: #6a0dad;
+  /* Korkan ağız */
+  .scared .mouth {
+    width: 10px;
+    height: 20px;
+    background-color: black;
+    top: 55px;
   }
 
-  @keyframes upDown {
-    0%, 100% { top: 0; }
-    50% { top: 20px; }
-  }
-
-  /* Büyüyüp küçülen ve rengi değişen */
-  .grow-shrink {
-    animation: growShrink 2s ease-in-out infinite;
-    background-color: #ff6347;
-  }
-
-  @keyframes growShrink {
-    0%, 100% { transform: scale(1); background-color: #ff6347; }
-    50% { transform: scale(1.3); background-color: #ff4500; }
-  }
-
-  /* Transparanlık artan ve azalan */
-  .fade {
-    animation: fadeInOut 2s ease-in-out infinite;
-    background-color: #e75480;
-  }
-
-  @keyframes fadeInOut {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-  }
-
-  /* Sağa sola hareket eden */
-  .left-right {
-    animation: leftRight 2s ease-in-out infinite;
-    background-color: #4682b4;
-  }
-
-  @keyframes leftRight {
-    0%, 100% { left: 0; }
-    50% { left: 20px; }
-  }
-
-  /* Dönen */
-  .rotate {
-    animation: rotation 2s linear infinite;
-    background-color: #1e90ff;
-  }
-
-  @keyframes rotation {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  /* Gülümseyen ağız */
+  .smiling .mouth {
+    border-radius: 0 0 10px 10px;
+    height: 5px;
   }
 </style>
 </head>
 <body>
 
-<div class="circle up-down">
+<!-- Ağlayan Daire -->
+<div class="circle crying">
   <div class="eye left"></div>
   <div class="eye right"></div>
   <div class="nose"></div>
-  <div class="ear left"></div>
-  <div class="ear right"></div>
+  <div class="mouth"></div>
+  <div class="tear left"></div>
+  <div class="tear right"></div>
+</div>
+
+<!-- Kahkaha Atan Daire -->
+<div class="circle laughing">
+  <div class="eye left"></div>
+  <div class="eye right"></div>
+  <div class="nose"></div>
   <div class="mouth"></div>
 </div>
 
-<div class="circle grow-shrink">
+<!-- Korkan Daire -->
+<div class="circle scared">
   <div class="eye left"></div>
   <div class="eye right"></div>
-  <div class="nose"></div
+  <div class="nose"></div>
+  <div class="mouth"></div>
+</div>
+
+<!-- Gülümseyen Daire -->
+<div class="circle smiling">
+  <div class="eye left"></div>
+  <div class="eye right"></div>
+  <div class="nose"></div>
+  <div class="mouth"></div>
+</div>
+
+</body>
+</html>
