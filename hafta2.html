@@ -1,172 +1,64 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="utf-8">
-    <title>Hafta 2 - Masal</title>
-    <style>
-        /* Genel stil */
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Başlık */
-        header {
-            background-color: #6A5ACD;
-            color: white;
-            text-align: center;
-            padding: 2em 0;
-            font-family: 'Georgia', serif;
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1. Vize</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffd1dc; /* Arka plan rengi açık pembe olarak değiştirildi */
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-        /* Navigasyon menüsü */
-        nav {
-            background-color: #FFB90F;
-            padding: 1em;
-            text-align: center;
-        }
+    .container {
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      width: 100%;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1em;
-        }
+    h1 {
+      font-size: 1.5em;
+      color: #E75480;
+      margin-bottom: 20px;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    a {
+      display: block;
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: bold;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-        nav a:hover {
-            color: #FFD700;
-        }
-
-        /* Bölümler */
-        section {
-            max-width: 800px;
-            margin: 2em auto;
-            padding: 1em;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        section h2 {
-            color: #6AACD;
-            text-align: center;
-            font-family: 'Georgia', serif;
-        }
-
-        section p {
-            line-height: 1.6;
-            font-size: 1.1em;
-            text-align: justify;
-        }
-
-        /* Resim ve ses */
-        section img {
-            display: block;
-            margin: 1em auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 100%;
-        }
-
-        figure {
-            text-align: center;
-            margin: 1em 0;
-        }
-
-        audio {
-            width: 100%;
-            outline: none;
-        }
-
-        /* Altbilgi */
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background-color: #6A5ACD;
-            color: white;
-        }
-    </style>
+    a:hover {
+      background-color: #0066cc;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-<header>
-    <h1>Kaybolmuş Günün Melodisi</h1>
-</header>
-<nav>
-    <ul>
-        <li><a href="#bolum1">1. Bölüm</a></li>
-        <li><a href="#bolum2">2. Bölüm</a></li>
-        <li><a href="#bolum3">3. Bölüm</a></li>
-        <li><a href="#bolum4">4. Bölüm</a></li>
-    </ul>
-</nav>
-
-<section id="bolum1">
-    <h2>Bölüm 1: Kaybolan Gün</h2>
-    <img src="hafta2images/resim1.jpg" alt="Kaybolan Gün">
-    <p>Bir sabah, küçük bir köyde yaşayan Elif, güneşin doğuşuyla birlikte uyanmıştı...</p>
-    <figure>
-        <figcaption>1. Bölümü Dinle:</figcaption>
-        <audio controls src="hafta2sesler/m1.mp3">
-            <a href="hafta2sesler/m1.mp3">Download audio</a>
-        </audio>
-    </figure>
-</section>
-
-<section id="bolum2">
-    <h2>Bölüm 2: Ormanın Sırrı</h2>
-    <img src="hafta2images/resim2.jpg" alt="Ormanın Sırrı">
-    <p>Ormana girdiğinde, Elif bir an için tereddüt etti...</p>
-    <figure>
-        <figcaption>2. Bölümü Dinle:</figcaption>
-        <audio controls src="hafta2sesler/m2.mp3">
-            <a href="hafta2sesler/m2.mp3">Download audio</a>
-        </audio>
-    </figure>
-</section>
-
-<section id="bolum3">
-    <h2>Bölüm 3: Yeniden Doğuş</h2>
-    <img src="hafta2images/resim3.jpg" alt="Yeniden Doğuş">
-    <p>Elif, melodinin peşinden yürümeye devam etti...</p>
-    <figure>
-        <figcaption>3. Bölümü Dinle:</figcaption>
-        <audio controls src="hafta2sesler/m3.mp3">
-            <a href="hafta2sesler/m3.mp3">Download audio</a>
-        </audio>
-    </figure>
-</section>
-
-<section id="bolum4">
-    <h2>Bölüm 4: Yeni Başlangıç</h2>
-    <img src="hafta2images/resim4.jpg" alt="Yeni Başlangıç">
-    <p>Kız, Elif’in elini tuttu ve ışık içinde kayboldu...</p>
-    <figure>
-        <figcaption>4. Bölümü Dinle:</figcaption>
-        <audio controls src="hafta2sesler/m4.mp3">
-            <a href="hafta2sesler/m4.mp3">Download audio</a>
-        </audio>
-    </figure>
-</section>
-
-<footer>
-    © Berna ÖZDEMİR - 2210780009
-</footer>
+  <div class="container">
+    <h1>Web Dersi Ödevleri</h1>
+    <a href="hafta2.html">Hafta 2</a>
+    <a href="hafta3.html">Hafta 3</a>
+    <a href="hafta4.html">Hafta 4</a>
+    <a href="hafta5.html">Hafta 5</a>
+    <a href="hafta6.html">Hafta 6</a>
+    <a href="hafta7_1.html">Hafta 7.1</a>
+    <a href="hafta7_2.html">Hafta 7.2</a>
+  </div>
 </body>
 </html>
