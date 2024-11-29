@@ -1,0 +1,2 @@
+var veri-fetch ("sorular.json")
+.then (response
