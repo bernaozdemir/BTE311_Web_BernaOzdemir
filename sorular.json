@@ -1,2 +1,3 @@
-var veri-fetch ("sorular.json")
-.then (response
+var veri-fetch("sorular.json")
+them(response->response.json()) 
+then(data->(console.log(data);});
