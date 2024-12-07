@@ -110,17 +110,16 @@
       document.body.style.backgroundImage = `url(${selectedBackground})`;
     }
 
-    // Resmi göster/gizle ve arka planı değiştir
+    // Resim göster/gizle ve arka planı değiştir
     function handleButtonClick(imageId) {
       const img = document.getElementById(imageId);
-      img.classList.toggle('show'); // CSS class toggle ile çalışır
+
+      // Resmi göster/gizle
+      img.classList.toggle('show');
 
       // Rastgele bir arka plan ayarla
       setRandomBackground();
     }
-
-    // Sayfa ilk açıldığında rastgele bir arka plan ayarla
-    setRandomBackground();
   </script>
 </body>
 </html>
