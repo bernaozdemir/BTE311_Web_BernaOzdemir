@@ -104,13 +104,20 @@
     ];
 
     // Sayfa yüklendiğinde rastgele bir arka plan seç
-    document.body.style.backgroundImage = `url(${backgrounds[Math.floor(Math.random() * backgrounds.length)]})`;
+    function setRandomBackground() {
+      const randomIndex = Math.floor(Math.random() * backgrounds.length);
+      const selectedBackground = backgrounds[randomIndex];
+      document.body.style.backgroundImage = `url(${selectedBackground})`;
+    }
 
     // Resim göster/gizle işlevi
     function toggleImage(imageId) {
       const img = document.getElementById(imageId);
       img.classList.toggle('show'); // CSS class toggle ile çalışır
     }
+
+    // Rastgele arka planı ayarla
+    setRandomBackground();
   </script>
 </body>
 </html>
