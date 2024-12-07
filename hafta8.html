@@ -34,13 +34,13 @@
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
 
-    .images {
+    .hafta8images {
       display: flex;
       gap: 15px;
       margin-top: 20px;
     }
 
-    .images img {
+    .hafta8images img {
       width: 150px;
       height: 150px;
       object-fit: cover;
@@ -49,70 +49,8 @@
       opacity: 0;
       transform: scale(0.9);
       transition: opacity 0.5s ease, transform 0.3s ease;
-      display: none; /* Başlangıçta gizlenir */
     }
 
-    .images img.show {
+    .hafta8images img.show {
       opacity: 1;
-      transform: scale(1);
-      display: block; /* Görüntüyü açar */
-    }
-
-    button {
-      padding: 12px 24px;
-      margin: 10px;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(45deg, #ff7eb3, #ff758c);
-      color: #fff;
-      font-size: 1em;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 20px rgba(255, 117, 140, 0.7);
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Arka Plan ve Resimler</h1> <!-- Başlık etiketi düzeltildi -->
-    <div class="hafta8images"> <!-- class ismi düzeltildi -->
-      <img id="image1" src="image1.jpg" alt="Image 1">
-      <img id="image2" src="image2.jpg" alt="Image 2">
-      <img id="image3" src="image3.jpg" alt="Image 3">
-    </div>
-    <button onclick="toggleImage('image1')">🖼 Resim 1 Göster/Gizle</button>
-    <button onclick="toggleImage('image2')">🖼 Resim 2 Göster/Gizle</button>
-    <button onclick="toggleImage('image3')">🖼 Resim 3 Göster/Gizle</button>
-  </div>
-
-  <script>
-    // 10 farklı arka plan resmi
-    const backgrounds = [
-      'background1.jpg',
-      'background2.jpg',
-      'background3.jpg',
-      'background4.jpg',
-      'background5.jpg',
-      'background6.jpg',
-      'background7.jpg',
-      'background8.jpg',
-      'background9.jpg',
-      'background10.jpg'
-    ];
-
-    // Sayfa yüklendiğinde rastgele bir arka plan seç
-    document.body.style.backgroundImage = `url(${backgrounds[Math.floor(Math.random() * backgrounds.length)]})`;
-
-    // Resim göster/gizle işlevi
-    function toggleImage(imageId) {
-      const img = document.getElementById(imageId);
-      img.classList.toggle('show'); // CSS class toggle ile çalışır
-    }
-  </script>
-</body>
-</html>
+      
