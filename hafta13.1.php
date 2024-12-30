@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Kişi Ekle</h2>
-    <form action="hafta11.1.php" method="POST">
+    <form action="hafta13.1.php" method="POST">
         <label for="ad">Ad:</label><br>
         <input type="text" id="ad" name="ad" required><br><br>
 
