@@ -85,8 +85,8 @@
     <div class="container">
         <h1>Kişi Yönetim Sistemi</h1>
         <div class="nav">
-            <a href="/hafta11.1.php">Kişi Ekle</a>
-            <a href="/hafta11.2.php">Kişi Ara</a>
+            <a href="/hafta13.1.php">Kişi Ekle</a>
+            <a href="/hafta13.2.php">Kişi Ara</a>
         </div>
     </div>
 </body>
