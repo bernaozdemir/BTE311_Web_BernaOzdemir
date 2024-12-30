@@ -1,62 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Duyuru Penceresi</title>
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fbb6d0; /* Bebek pembesi */
-      font-family: Arial, sans-serif;
-    }
-
-    .notification {
+    /* Duyuru penceresinin başlangıç stilini ayarlıyoruz */
+    .announcement {
       position: fixed;
-      top: 20%;
+      top: 20px;
       left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #a2c9e0; /* Bebek mavisi */
-      border: 1px solid #ddd;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transform: translateX(-50%);
+      background-color: #ffc0cb; /* Açık pembe arka plan rengi */
+      color: black;
       padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      width: 300px;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 1s ease-in-out, visibility 0s 1s;
+      border-radius: 5px;
+      font-size: 16px;
+      visibility: hidden; /* Başlangıçta görünmez */
+      opacity: 0; /* Opacity başlangıçta sıfır */
+      transition: opacity 1s, visibility 1s; /* Animasyon ekliyoruz */
     }
 
-    .notification.show {
-      opacity: 1;
+    /* Animasyon için CSS */
+    .show {
       visibility: visible;
-      transition: opacity 1s ease-in-out;
+      opacity: 1; /* 5 saniye sonra görünür ve opaklık 1 olur */
     }
-
   </style>
 </head>
 <body>
-  <div class="notification" id="notification">
-    Selamm, bu bir duyuru penceresi!
+
+  <!-- Duyuru Penceresi -->
+  <div id="announcement" class="announcement">
+    <p>Bu bir duyuru penceresidir. 5 saniye sonra kapanacak!</p>
   </div>
 
   <script>
-    const notification = document.getElementById('notification');
+    // Duyuru penceresini alıyoruz
+    const announcement = document.getElementById('announcement');
 
-    function showNotification() {
-      notification.classList.add('show'); // Duyuru penceresini görünür yap
-
-      setTimeout(() => {
-        notification.classList.remove('show'); // 5 saniye sonra duyuru kaybolur
+    // Sayfa yüklendikten hemen sonra duyuru penceresini göster
+    window.onload = function() {
+      announcement.classList.add('show');
+      
+      // 5 saniye sonra duyuru penceresini gizle
+      setTimeout(function() {
+        announcement.classList.remove('show');
       }, 5000);
-    }
-
-    window.onload = showNotification; // Sayfa yüklendiğinde duyuruyu göster
+    };
   </script>
+
 </body>
 </html>
