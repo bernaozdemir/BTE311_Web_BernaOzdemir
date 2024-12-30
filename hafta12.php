@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hafta 12 Görevleri</title>
+    <title>Hafta 12 - 1 ile 100 Arası Tek Sayılar ve Dinamik Tablo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
