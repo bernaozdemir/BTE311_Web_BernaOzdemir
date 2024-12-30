@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hafta 9 - Test Uygulaması</title>
+    <title>Test Uygulaması</title>
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
@@ -128,12 +128,12 @@
                     // Soruları ekle
                     const questionsContainer = document.getElementById('questions-container');
                     questionsContainer.innerHTML = ''; // önceki soruları temizle
-                    data.questions.forEach((question, index) => {
+                    data.htmlQuestions.forEach((question, index) => {
                         const questionElement = document.createElement('div');
                         questionElement.classList.add('question');
 
                         const title = document.createElement('h2');
-                        title.textContent = `${index + 1}. ${question.title}`;
+                        title.textContent = `${index + 1}. ${question.question}`;
                         questionElement.appendChild(title);
 
                         const optionsContainer = document.createElement('div');
@@ -142,7 +142,7 @@
                             const optionInput = document.createElement('input');
                             optionInput.type = 'radio';
                             optionInput.name = `question-${index}`;
-                            optionInput.value = option;
+                            optionInput.value = option[0]; // A, B, C, D
                             optionLabel.appendChild(optionInput);
                             optionLabel.appendChild(document.createTextNode(option));
                             optionsContainer.appendChild(optionLabel);
@@ -160,9 +160,9 @@
 
                     submitButton.addEventListener('click', function () {
                         let score = 0;
-                        data.questions.forEach((question, index) => {
+                        data.htmlQuestions.forEach((question, index) => {
                             const selectedOption = document.querySelector(`input[name="question-${index}"]:checked`);
-                            if (selectedOption && selectedOption.value === question.correctAnswer) {
+                            if (selectedOption && selectedOption.value === question.answer) {
                                 score++;
                             }
                         });
@@ -170,7 +170,7 @@
                         // Popup göster
                         const popup = document.getElementById('popup');
                         const popupResult = document.getElementById('popup-result');
-                        popupResult.textContent = `Sonuç: ${score}/${data.questions.length} doğru!`;
+                        popupResult.textContent = `Sonuç: ${score}/${data.htmlQuestions.length} doğru!`;
                         popup.style.display = 'block';
                         document.getElementById('overlay').style.display = 'block';
                     });
