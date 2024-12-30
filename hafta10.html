@@ -36,18 +36,18 @@
   </div>
 
   <script>
-    // Duyuru penceresini alıyoruz
-    const announcement = document.getElementById('announcement');
+    // Sayfa içeriği tamamen yüklendikten sonra çalışacak fonksiyon
+    document.addEventListener("DOMContentLoaded", function() {
+      const announcement = document.getElementById('announcement');
 
-    // Sayfa yüklendikten hemen sonra duyuru penceresini göster
-    window.onload = function() {
+      // Duyuru penceresini göster
       announcement.classList.add('show');
       
       // 5 saniye sonra duyuru penceresini gizle
       setTimeout(function() {
         announcement.classList.remove('show');
       }, 5000);
-    };
+    });
   </script>
 
 </body>
