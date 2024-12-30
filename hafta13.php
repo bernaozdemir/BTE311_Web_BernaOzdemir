@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kişi Yönetim Sistemi</title>
+    <title>Hafta 13 - Kişi Yönetim Sistemi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
