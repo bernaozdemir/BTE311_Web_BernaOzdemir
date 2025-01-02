@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Grid</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000;"></canvas>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const canvas = document.getElementById("myCanvas");
+            if (canvas && canvas.getContext) {
+                const ctx = canvas.getContext("2d");
+
+                const circleDiameter = 50; // Her dairenin çapı
+                const rows = 10;
+                const cols = 10;
+
+                function getRandomColor() {
+                    const r = Math.floor(Math.random() * 256);
+                    const g = Math.floor(Math.random() * 256);
+                    const b = Math.floor(Math.random() * 256);
+                    return `rgb(${r},${g},${b})`;
+                }
+
+                for (let row = 0; row < rows; row++) {
+                    for (let col = 0; col < cols; col++) {
+                        const x = col * circleDiameter + circleDiameter / 2;
+                        const y = row * circleDiameter + circleDiameter / 2;
+
+                        ctx.beginPath();
+                        ctx.arc(x, y, circleDiameter / 2, 0, Math.PI * 2);
+                        ctx.fillStyle = getRandomColor();
+                        ctx.fill();
+                        ctx.closePath();
+                    }
+                }
+            } else {
+                console.error("Canvas desteklenmiyor veya bulunamadı.");
+            }
+        });
+    </script>
+</body>
+</html>
